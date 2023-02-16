@@ -1,38 +1,275 @@
+
+@font-face {
+  font-family: 'game-cube';
+  src: url('./assets/kumbhsans-variablefont_wght-webfont.woff2') format('woff2'),
+       url('./assets/kumbhsans-variablefont_wght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  /* min-height: 100vh; */
+}
+
+:root {
+  --cube-size: min(15vw, 75px);
+}
+
+body {
+  font-family: 'game-cube';
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: black;
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(128, 128, 128, 1) 3px, transparent 1px),
+    linear-gradient(to bottom, rgba(128, 128, 128, 1) 3px, transparent 1px);
+
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: radial-gradient(rgba(0, 0, 0, 0.315), rgb(0, 0, 0) 85%);
+}
+
+.saves-container {
+  width: min-content;
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+  gap: calc(var(--cube-size) * 0.4);
+}
+.container {
+  width: var(--cube-size);
+  height: var(--cube-size);
+  perspective: 1000px;
+}
+
+.cube {
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.face {
+  border: 1px solid #204af4;
+  box-shadow: 1px 1px 10px 1px #204af4;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(230deg, #204af4cc, #00000080 40%),
+    linear-gradient(127deg, #204af400, #204af400 20%),
+    linear-gradient(40deg, #204af4, #204af407 50%);
+    transition: 0.3;
+}
+
+.face-side {
+  height: 50%;
+}
+
+.face-shoulder {
+  width: 50%;
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(calc(var(--cube-size) * 0.25));
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(calc(var(--cube-size) * 0.75));
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(calc(var(--cube-size) * 0.75));
+}
+.left {
+  transform: rotateY(-90deg) translateZ(calc(var(--cube-size) * 0.25));
+}
+
+.front {
+  transform: rotateX(0deg) translateZ(calc(var(--cube-size) * 0.25));
+}
+.back {
+  transform: rotateX(-180deg) translateZ(calc(var(--cube-size) * 0.25));
+}
+
+@keyframes spin {
+  from {
+    transform: rotateX(-5deg) rotateY(-5deg);
+  }
+  to {
+    transform: rotateX(5deg) rotateY(5deg);
+  }
+}
+
+@keyframes eight {
+  0% {
+    translate: 0 0;
+  }
+
+  12.5% {
+    translate: 0 calc(var(--cube-size) * -0.06);
+  }
+  25% {
+    translate: 0 calc(var(--cube-size) * -0.08);
+  }
+  37.5% {
+    translate: 0 calc(var(--cube-size) * -0.06);
+  }
+  50% {
+    translate: 0 0;
+  }
+
+  62.5% {
+    translate: 0 calc(var(--cube-size) * 0.06);
+  }
+
+  75% {
+    translate: 0 calc(var(--cube-size) * 0.08);
+  }
+
+  87.5% {
+    translate: 0 calc(var(--cube-size) * 0.06);
+  }
+
+  100% {
+    translate: 0 0;
+  }
+}
+
+@keyframes eightTwo {
+  0% {
+    translate: 0 0;
+    transform: rotateX(-7deg) rotateY(10deg) rotate(0deg);
+  }
+
+
+  23% {
+    /* transform: rotateX(-10deg) rotateY(15deg) rotate(-0.5deg); */
+    translate: calc(var(--cube-size) * -0.08) 0;
+  }
+
+  27% {
+    rotate: -5deg;
+    /* transform: rotateX(-10deg) rotateY(15deg) rotate(-1deg); */
+    translate: calc(var(--cube-size) * -0.08) 0;
+  }
+
+
+  50% {
+    /* rotate(3deg) */
+    transform: rotateX(10deg) rotateY(-3deg);
+
+    translate: 0 0;
+  }
+
+  73% {
+    /* transform: rotateX(-5deg) rotateY(-3deg) rotate(3deg); */
+    translate: calc(var(--cube-size) * 0.08) 0;
+  }
+
+  77% {
+    rotate: 5deg;
+    /* transform: rotateX(5deg) rotateY(-3deg) rotate(3deg); */
+    translate: calc(var(--cube-size) * 0.08) 0;
+  }
+
+  100% {
+    translate: 0 0 ;
+    transform: rotateX(-7deg) rotateY(10deg) rotate(0deg);
+  }
+}
+.cube {
+  transform: rotateX(-7deg) rotateY(10deg);
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  animation-duration: 6s;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Y */
+.container {
+  animation-duration: 3s;
+  animation-direction:normal;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.container:hover{
+  z-index: 2;
+  animation-name: eight;
+  scale: 1.2;
+}
+
+.container:hover .cube {
+  animation-name: eightTwo;
+  scale: 1.2;
+}
+
+.container:hover .face {
+  border: 1px solid #3d9fc6;
+  box-shadow: 1px 1px 10px 1px #3d9fc6;
+  background: linear-gradient(230deg, #3d9fc6cc, #00000000 40%),
+    linear-gradient(127deg, #3d9fc600, #3d9fc600 20%),
+    linear-gradient(40deg, #3d9fc6, #3d9fc607 50%);
+}
+
+.face.front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.face img {
+  max-height: 90%;
+  max-width: 90%;
+}
+
+.test {
+  margin: 100px;
+  font-size: 100px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.instructions {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding: 10px;
+  box-sizing: border-box;
+  color: white;
+  background: linear-gradient(rgba(3, 1, 143, 0.895), rgba(54, 0, 93, 0.867));
+  height: 100px;
+  border: 2px solid lightgray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.instructions p {
+  margin: 0;
+  width: min(500px, 95vw)
+}
+
+.false-nav {
+  margin-top: 10px;
+  height: 20px;
+}
+
+.false-nav--item {
+  display: flex;
+  height: 30px;
+}
+.joy-stick {
+  height: 100%;
+  opacity: 0.6;
 }
