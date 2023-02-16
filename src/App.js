@@ -19,6 +19,16 @@ import wario from './assets/wario.png';
 import windwaker from './assets/wind-waker.png';
 import joyStick from './assets/joy-stick.svg';
 
+function Dots() {
+  return (
+    <div className="dots">
+      <span className="dot"></span>
+      <span className="dot"></span>
+      <span className="dot"></span>
+    </div>
+  );
+}
+
 function App() {
   const [saves, setSaves] = useState([
     { img: animalCrossing, id: 'animalCrossing', selected: false },
@@ -40,7 +50,7 @@ function App() {
   ]);
   return (
     <div className="App">
-      <div className='saves-container'>
+      <div className="saves-container">
         {saves.map((save) => (
           <Cube>
             <img src={save.img} alt={save.id} />
@@ -48,13 +58,25 @@ function App() {
         ))}
       </div>
       <div className="instructions">
-        <p>Click on each save ONCE</p>
+        <p>Click on each save ONCE...</p>
       </div>
       <div className="false-nav">
         <div className="false-nav--item">
-          <img className='joy-stick' src={joyStick} />
+          <img className="joy-stick" src={joyStick} alt="joy stick design" />
+          <Dots />
+          <div className="false-nav--text">Select</div>
         </div>
-
+        <div className='false-nav--item'>
+          <div className='false-nav--button B'><span className='button-letter'>B</span></div>
+          <Dots />
+          <div className="false-nav--text">Finish</div>
+        </div>
+        
+        <div className='false-nav--item'>
+          <div className='false-nav--button A'><span className='button-letter'>A</span></div>
+          <Dots />
+          <div className="false-nav--text">Confirm</div>
+        </div>
       </div>
     </div>
   );
