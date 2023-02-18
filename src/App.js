@@ -116,7 +116,7 @@ function App() {
       </div>
       <div className="saves-container">
         {saves.map((save) => (
-          <Cube handleClick={() => handleClick(save.id)}>
+          <Cube key={save.id} handleClick={() => handleClick(save.id)}>
             <img src={save.img} alt={save.id} />
           </Cube>
         ))}
