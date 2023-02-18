@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/memory-card-game/static/css/main.0db7ab24.css",
+    "main.js": "/memory-card-game/static/js/main.d08c1031.js",
+    "static/js/787.079dd69e.chunk.js": "/memory-card-game/static/js/787.079dd69e.chunk.js",
+    "static/media/metroid.png": "/memory-card-game/static/media/metroid.13d33eead85893bc4714.png",
+    "static/media/strikers.png": "/memory-card-game/static/media/strikers.b836361c8cd9dd517bf0.png",
+    "static/media/double-dash.png": "/memory-card-game/static/media/double-dash.482563c248c63799928a.png",
+    "static/media/sonic.png": "/memory-card-game/static/media/sonic.5d9e880bbdd38b24568c.png",
+    "static/media/starfox.png": "/memory-card-game/static/media/starfox.5e5bda3129f7b39b5282.png",
+    "static/media/wario.png": "/memory-card-game/static/media/wario.0f6b25918d42cd437d20.png",
+    "static/media/mario-sunshine.png": "/memory-card-game/static/media/mario-sunshine.6f3707504d7b06e345b2.png",
+    "static/media/resetti.png": "/memory-card-game/static/media/resetti.811349b840a94d5002d0.png",
+    "static/media/pokemon.png": "/memory-card-game/static/media/pokemon.46763b2674cb58818ed6.png",
+    "static/media/donkey.png": "/memory-card-game/static/media/donkey.5aae9cb5fe940ee70e04.png",
+    "static/media/mario-party.png": "/memory-card-game/static/media/mario-party.598ac1ab17a854a0a954.png",
+    "static/media/luigi.png": "/memory-card-game/static/media/luigi.e729a91a2a324b692f73.png",
+    "static/media/ac-nook.png": "/memory-card-game/static/media/ac-nook.0c2b7903249e4cb8942b.png",
+    "static/media/kirby.png": "/memory-card-game/static/media/kirby.078fb0a973fca00c0348.png",
+    "static/media/wind-waker.png": "/memory-card-game/static/media/wind-waker.1e8e79d9a45ccad6d534.png",
+    "static/media/pikmin.png": "/memory-card-game/static/media/pikmin.09b3fdc4d7783e88d2fe.png",
+    "static/media/kumbhsans-variablefont_wght-webfont.woff": "/memory-card-game/static/media/kumbhsans-variablefont_wght-webfont.8b3fb8fc446ccc6bfef5.woff",
+    "static/media/kumbhsans-variablefont_wght-webfont.woff2": "/memory-card-game/static/media/kumbhsans-variablefont_wght-webfont.aa731455fd6a50af9985.woff2",
+    "static/media/1up-mushroom2.png": "/memory-card-game/static/media/1up-mushroom2.0fdd139a4b2d3d2d4628.png",
+    "static/media/smash.png": "/memory-card-game/static/media/smash.8635603670213503a143.png",
+    "static/media/mario-flag.svg": "/memory-card-game/static/media/mario-flag.c790d6175233ad80d542908f3a34b5e1.svg",
+    "static/media/resetti-talk.svg": "/memory-card-game/static/media/resetti-talk.21449e47735a3beee0eb2aca96fb49bf.svg",
+    "static/media/joy-stick.svg": "/memory-card-game/static/media/joy-stick.c391a7078ef24bab8fcae33f9497432f.svg",
+    "index.html": "/memory-card-game/index.html",
+    "main.0db7ab24.css.map": "/memory-card-game/static/css/main.0db7ab24.css.map",
+    "main.d08c1031.js.map": "/memory-card-game/static/js/main.d08c1031.js.map",
+    "787.079dd69e.chunk.js.map": "/memory-card-game/static/js/787.079dd69e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0db7ab24.css",
+    "static/js/main.d08c1031.js"
+  ]
+}
