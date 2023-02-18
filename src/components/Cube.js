@@ -1,8 +1,8 @@
 
-export default function Cube({children}) {
+export default function Cube({children, handleClick}) {
   return (
-    <div className="container">
-      <div className="cube">
+    <div className="container" onClick={handleClick}>
+      <div className="cube animate-hover">
         <div className="face front">
           {children}
         </div>
